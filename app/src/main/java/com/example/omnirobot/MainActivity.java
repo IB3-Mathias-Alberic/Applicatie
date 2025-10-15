@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         //knoppen invoegen en handlers geven?
-        Button mClickButton1 = findViewById(R.id.clickButton1);
+        Button mClickButton1 = findViewById(R.id.button);
 
 
 
