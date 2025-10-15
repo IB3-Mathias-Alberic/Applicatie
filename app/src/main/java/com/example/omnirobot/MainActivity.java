@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         //knoppen invoegen en handlers geven?
         Button mClickButton1 = findViewById(R.id.button);
+        //halo
 
 
 
