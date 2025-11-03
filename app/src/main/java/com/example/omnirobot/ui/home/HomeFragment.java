@@ -18,13 +18,28 @@ public class HomeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+
+        //binding.foto.setVisibility(View.GONE);
+
         HomeViewModel homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
+        binding.knop.setOnClickListener(v -> {
+            if (binding.foto.getVisibility() == View.VISIBLE) {
+                binding.foto.setVisibility(View.GONE);
+                binding.tekstje.setVisibility(View.GONE);
+            }
+            else {
+                binding.tekstje.setVisibility(View.VISIBLE);
+                binding.foto.setVisibility(View.VISIBLE);
+            }
+        });
+
+
+        final TextView textView = binding.tekst;
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
