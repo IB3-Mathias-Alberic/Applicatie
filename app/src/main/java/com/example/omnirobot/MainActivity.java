@@ -43,6 +43,7 @@
 //}
 
 package com.example.omnirobot;
+import java.sql.*;
 
 // Imports voor de benodigde classes
 import android.os.Bundle;

@@ -6,6 +6,7 @@ android {
     namespace = "com.example.omnirobot"
     compileSdk = 36
 
+
     defaultConfig {
         applicationId = "com.example.omnirobot"
         minSdk = 25
@@ -35,7 +36,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.constraintlayout)
@@ -46,4 +46,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
 }
