@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.notifications.NotificationsFragment">
 
+    <!-- Bestaande TextView -->
     <TextView
         android:id="@+id/text_notifications"
         android:layout_width="match_parent"
@@ -15,8 +16,125 @@
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/dpad_container"/>
+
+    <!-- DPAD toegevoegd -->
+    <RelativeLayout
+        android:id="@+id/dpad_container"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toBottomOf="@id/text_notifications"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnUp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/dpad_button"
+            android:src="@drawable/outline_arrow_upward_24"
+            app:tint="#0F0"
+            android:layout_alignParentTop="true"/>
+
+        <ImageButton
+            android:id="@+id/btnDown"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/dpad_button"
+            android:src="@drawable/outline_arrow_downward_24"
+            app:tint="#0F0"
+            android:layout_alignParentBottom="true"/>
+
+        <ImageButton
+            android:id="@+id/btnLeft"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/dpad_button"
+            android:src="@drawable/outline_arrow_back_24"
+            app:tint="#0F0"
+            android:layout_alignParentStart="true"/>
+
+        <ImageButton
+            android:id="@+id/btnRight"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/dpad_button"
+            android:src="@drawable/outline_arrow_forward_24"
+            app:tint="#0F0"
+            android:layout_alignParentEnd="true"/>
+
+        <ImageButton
+            android:id="@+id/btnCenter"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/dpad_button"
+            android:src="@drawable/outline_ads_click_24"
+            app:tint="#0F0"/>
+
+        <ImageButton
+            android:id="@+id/btnUpLeft"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignTop="@id/btnUp"
+            android:layout_alignStart="@id/btnLeft"
+            android:background="@drawable/dpad_button"
+            android:src="@drawable/outline_arrow_insert_24"
+            app:tint="#0F0"/>
+
+        <ImageButton
+            android:id="@+id/btnUpRight"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignTop="@id/btnUp"
+            android:layout_alignEnd="@id/btnRight"
+            android:background="@drawable/dpad_button"
+            android:src="@drawable/outline_arrow_outward_24"
+            app:tint="#0F0"/>
+
+        <ImageButton
+            android:id="@+id/btnDownLeft"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignBottom="@id/btnDown"
+            android:layout_alignStart="@id/btnLeft"
+            android:background="@drawable/dpad_button"
+            android:src="@drawable/outline_arrow_insert_24"
+            android:rotation="-90"
+            app:tint="#0F0"/>
+
+        <ImageButton
+            android:id="@+id/btnDownRight"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignBottom="@id/btnDown"
+            android:layout_alignEnd="@id/btnRight"
+            android:background="@drawable/dpad_button"
+            android:src="@drawable/outline_arrow_outward_24"
+            android:rotation="90"
+            app:tint="#0F0"/>
+
+        <ImageButton
+            android:id="@+id/btnTurn"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/btnDown"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dpad_button"
+            android:scaleX="-1"
+            android:src="@drawable/outline_360_24"
+            android:visibility="visible"
+            app:tint="#0F0"
+            tools:visibility="visible" />
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
